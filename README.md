@@ -4,7 +4,7 @@
 
 ## How to open/use the program
 **Online:**
-You can access the simulation online using this link [![Click Me](/images/ClickMe.png)](https://soulbreather.github.io/Virus-Simulation/src/index.html)
+You can access the simulation online using this: [![Click Me](/images/ClickMe.png)](https://soulbreather.github.io/Virus-Simulation/src/index.html)
 
 **Locally:**
 The repository can also be cloned and runned from your desktop. Just simply run this command in your terminal:
