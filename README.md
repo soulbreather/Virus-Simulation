@@ -27,4 +27,4 @@ You can create an issue by clicking [this](https://github.com/soulbreather/Virus
 - [ ] Create advanced tab
 - [ ] Create isolation option
 - [ ] Create movement type option
-- [ ] Make self adjustable max values for various sliders needing it. Fx infected slider max value sould be the same as amount of people
+- [ ] Make self-adjusting max values for various sliders needing it. Fx infected slider max value sould be the same as amount of people
