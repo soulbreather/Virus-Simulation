@@ -11,7 +11,12 @@ The repository can also be cloned and runned from your desktop. Just simply run 
     
     git clone https://github.com/soulbreather/Virus-Simulation.git
 
-Or alternatively install it with this other awesome button [![Click Me](https://awesome.re/badge.svg)](https://github.com/soulbreather/Virus-Simulation/archive/master.zip)
+Or alternatively install it by clicking [this](https://github.com/soulbreather/Virus-Simulation/archive/master.zip).
+
+## Discovered a bug or have an idea of a new feature? 
+If you discover any bugs or you just want some features added that aren't listed on the TODO list then feel free to create an issue, remember to use our template so we can understand your request down to every detail.
+
+You can create an issue by clicking [this](https://github.com/soulbreather/Virus-Simulation/issues/new/choose).
 
 ## TODO List
 - [x] Create People class
