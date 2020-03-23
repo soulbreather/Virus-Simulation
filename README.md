@@ -9,9 +9,9 @@ You can access the simulation online using this: [![Click Me](/images/ClickMe.pn
 **Locally:**
 The repository can also be cloned and runned from your desktop. Just simply run this command in your terminal:
     
-    git clone https://github.com/soulbreather/VirusSimulation.git
+    git clone https://github.com/soulbreather/Virus-Simulation.git
 
-Or alternatively install it with this [link](https://github.com/soulbreather/VirusSimulation.git).
+Or alternatively install it with this [link](https://github.com/soulbreather/Virus-Simulation/archive/master.zip).
 
 ## TODO List
 - [x] Create People class
