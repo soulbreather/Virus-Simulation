@@ -4,14 +4,14 @@
 
 ## How to open/use the program
 **Online:**
-You can access the simulation online using this: [![Click Me](/images/ClickMe.png)](https://soulbreather.github.io/Virus-Simulation/src/index.html)
+You can access the simulation online using this awesome button [![Click Me](https://awesome.re/badge.svg)](https://soulbreather.github.io/Virus-Simulation/src/index.html)
 
 **Locally:**
 The repository can also be cloned and runned from your desktop. Just simply run this command in your terminal:
     
     git clone https://github.com/soulbreather/Virus-Simulation.git
 
-Or alternatively install it with this [link](https://github.com/soulbreather/Virus-Simulation/archive/master.zip).
+Or alternatively install it with this other awesome button [![Click Me](https://awesome.re/badge.svg)](https://github.com/soulbreather/Virus-Simulation/archive/master.zip).
 
 ## TODO List
 - [x] Create People class
