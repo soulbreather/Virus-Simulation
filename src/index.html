@@ -81,7 +81,9 @@
 
                         <form>
                             <div class="form-group text-left">
-                                <label for="hygieneSlider">Hygiene level:</label>
+                                <label for="hygieneSlider" class="text-warning" data-toggle="tooltip"
+                                    title="This slider decides how much people care about hygiene">Hygiene
+                                    level:</label>
                                 <span id="hygieneText">1</span>
                                 <input oninput="updateHygieneValue()" type="range" class="slider" min="1" max="10"
                                     value="1" id="hygieneSlider" style="background-color: rgb(87, 87, 87);">
@@ -89,7 +91,9 @@
                                 <br>
                                 <br>
 
-                                <label for="foolsSlider">Fools (at start):</label>
+                                <label for="foolsSlider" class="text-warning" data-toggle="tooltip"
+                                    title="This slider decides how fools there are. Fools are people ignoring hygiene">Fools
+                                    (at start):</label>
                                 <span id="foolsText">0</span>
                                 <input oninput="updateFoolsValue()" type="range" class="slider" min="0" max="99"
                                     value="0" id="foolsSlider" style="background-color: rgb(87, 87, 87);">
@@ -97,7 +101,9 @@
                                 <br>
                                 <br>
 
-                                <label for="infectedSlider">Infected (at start):</label>
+                                <label for="infectedSlider" class="text-warning" data-toggle="tooltip"
+                                    title="This slider decides how many people are infected from start">Infected (at
+                                    start):</label>
                                 <span id="infectedText">1</span>
                                 <input oninput="updateInfectedValue()" type="range" class="slider" min="0" max="100"
                                     value="1" id="infectedSlider" style="background-color: rgb(87, 87, 87);">
@@ -121,6 +127,12 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 
 
