@@ -29,6 +29,7 @@ You can create an issue by clicking [this](https://github.com/soulbreather/Virus
 - [x] Make nice bootstrap 4 design
 - [x] Create tooltips
 - [ ] Add slider for adjusting sample size
+- [ ] Make dead people fade away
 - [ ] Add graph
 - [ ] Create advanced tab
 - [ ] Create isolation option
