@@ -6,10 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="sketch.js"></script>
     <script src="functions.js"></script>
+    <script src="chartjs.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Bootstrap CSS -->
@@ -44,7 +47,6 @@
         <div class="row justify-content-between">
             <div class="col-md-auto my-2">
                 <div class="card" style="background-color: rgb(87, 87, 87); color: white; height: 34.44rem;">
-
                     <div class="card-header" style="background-color: #333;">Simulation</div>
 
                     <div class="card-body" id="sketch-div">
@@ -81,6 +83,16 @@
 
                         <form>
                             <div class="form-group text-left">
+                                <label for="peopleSlider" class="text-warning" data-toggle="tooltip"
+                                    title="This slider adjusts how many people you're starting with">Amount of
+                                    people</label>
+                                <span id="peopleText">1</span>
+                                <input oninput="updatePeopleValue()" type="range" class="slider" min="100" max="300"
+                                    value="1" id="peopleSlider" style="background-color: rgb(87, 87, 87);">
+
+                                <br>
+                                <br>
+
                                 <label for="hygieneSlider" class="text-warning" data-toggle="tooltip"
                                     title="This slider decides how much people care about hygiene">Hygiene
                                     level:</label>
@@ -105,7 +117,7 @@
                                     title="This slider decides how many people are infected from start">Infected (at
                                     start):</label>
                                 <span id="infectedText">1</span>
-                                <input oninput="updateInfectedValue()" type="range" class="slider" min="0" max="100"
+                                <input oninput="updateInfectedValue()" type="range" class="slider" min="1" max="100"
                                     value="1" id="infectedSlider" style="background-color: rgb(87, 87, 87);">
 
                             </div>
@@ -113,6 +125,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+
         </div>
     </div>
 
@@ -134,7 +149,6 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-
 
 </body>
 

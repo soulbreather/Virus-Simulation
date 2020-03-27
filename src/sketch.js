@@ -5,6 +5,7 @@ count = 0;
 list_of_people = [];
 let start = false;
 
+let peopleNumber;
 let hygieneNumber;
 let foolsNumber;
 let infectedNumber;
@@ -13,6 +14,9 @@ let infectedNumber;
 
 function setup() {
 
+  peopleNumber = updatePeopleValue();
+  amount_of_people = peopleNumber;
+  updateSliderValues();
   hygieneNumber = updateHygieneValue();
   foolsNumber = updateFoolsValue();
   infectedNumber = updateInfectedValue();
@@ -47,9 +51,12 @@ function draw() {
 
     }
   }
+  updateSliderValues();
+  peopleNumber = updatePeopleValue();
   hygieneNumber = updateHygieneValue();
   foolsNumber = updateFoolsValue();
   infectedNumber = updateInfectedValue();
+
 }
 
 class People {
@@ -96,7 +103,7 @@ class People {
     this.count -= 1;
     this.recovery_count -= 1;
 
-    if (this.survival_count > this.healthiness && !this.dead && this.count == 0) {
+    if (this.survival_count >= this.healthiness && !this.dead && this.count == 0) {
       this.infected = false;
       this.recovered = true;
     }

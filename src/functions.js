@@ -1,3 +1,10 @@
+// Updates all slider values to match the sim size
+function updateSliderValues() {
+  var newMax = document.getElementById("peopleSlider").value;
+  document.getElementById("infectedSlider").max = newMax;
+  document.getElementById("foolsSlider").max = newMax - document.getElementById("infectedSlider").value;
+}
+
 // Updates the text value of hygiene
 function updateHygieneValue() {
   let sliderValue = document.getElementById("hygieneSlider");
@@ -28,12 +35,25 @@ function updateInfectedValue() {
   return int(infectedText.innerHTML);
 }
 
+// Updates the text value of infected
+function updatePeopleValue() {
+  let peopleValue = document.getElementById("peopleSlider");
+  let peopleText = document.getElementById("peopleText");
+
+  peopleText.innerHTML = peopleValue.value;
+
+  return int(peopleText.innerHTML);
+}
+
+
+
 
 // Starts|restarts the simulation when called
 function run() {
-  //amount_of_people = people_slider.value();
+  amount_of_people = peopleNumber;
   amount_of_infected = infectedNumber;
   amount_of_fools = foolsNumber;
+
 
   for (let i = 0; i < amount_of_people; i++) {
     count = i;
