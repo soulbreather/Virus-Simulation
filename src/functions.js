@@ -89,11 +89,18 @@ function isTouching(i) {
       if (list_of_people[j].infected || list_of_people[i].infected) {
         list_of_people[j].infected = true;
         list_of_people[i].infected = true;
+        
+        list_of_people[i].healthy = false;
+        list_of_people[j].healthy = false;
+
       }
     } else if (i != j && distance <= list_of_people[j].diameter && list_of_people[i].fool || i != j && distance <= list_of_people[j].diameter && list_of_people[j].fool) {
       if (list_of_people[j].infected || list_of_people[i].infected) {
         list_of_people[j].infected = true;
         list_of_people[i].infected = true;
+
+        list_of_people[j].healthy = false;
+        list_of_people[i].healthy = false;
 
         list_of_people[i].fool = false;
         list_of_people[j].fool = false;
@@ -115,4 +122,53 @@ function infectedChecker() {
 
     }
   }
+}
+
+function updateHealthyPeople() {
+  amount_of_healthy_graph = 0;
+
+  for (let i = 0; i < amount_of_people; i++) {
+    if (list_of_people[i].healthy) {
+      amount_of_healthy_graph += 1;
+    }
+  }
+  console.log(amount_of_healthy_graph)
+
+  return amount_of_healthy_graph
+}
+
+function updateInfectedPeople() {
+  amount_of_infected_graph = 0;
+
+  for (let i = 0; i < amount_of_people; i++) {
+    if (list_of_people[i].infected && !list_of_people[i].dead && !list_of_people[i].recovered) {
+      amount_of_infected_graph += 1;
+    }
+  }
+  console.log(amount_of_infected_graph)
+  return amount_of_infected_graph
+}
+
+function updateRecoveredPeople() {
+  amount_of_recovered_graph = 0;
+
+  for (let i = 0; i < amount_of_people; i++) {
+    if (list_of_people[i].recovered && !list_of_people[i].dead && !list_of_people[i].infected) {
+      amount_of_recovered_graph += 1;
+    }
+  }
+  console.log(amount_of_recovered_graph)
+  return amount_of_recovered_graph
+}
+
+function updateDeadPeople() {
+  amount_of_dead_graph = 0;
+
+  for (let i = 0; i < amount_of_people; i++) {
+    if (list_of_people[i].dead && !list_of_people[i].recovered && !list_of_people[i].infected) {
+      amount_of_dead_graph += 1;
+    }
+  }
+  console.log(amount_of_dead_graph)
+  return amount_of_dead_graph
 }

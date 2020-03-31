@@ -1,16 +1,14 @@
-amount_of_people = 100;
-let amount_of_infected;
+let amount_of_people = 100;
 let amount_of_fools;
 count = 0;
 list_of_people = [];
 let start = false;
+let data;
 
 let peopleNumber;
 let hygieneNumber;
 let foolsNumber;
 let infectedNumber;
-
-
 
 function setup() {
 
@@ -20,7 +18,6 @@ function setup() {
   hygieneNumber = updateHygieneValue();
   foolsNumber = updateFoolsValue();
   infectedNumber = updateInfectedValue();
-  amount_of_infected = infectedNumber;
 
 
   // noStroke();
@@ -34,13 +31,14 @@ function setup() {
   document.getElementById('pause').onclick = () => noLoop();
 
   // Calls infectedChecker every 1000 milliseconds
+  setInterval(updateGraph, 1000);
   setInterval(infectedChecker, 1000);
-
+  
 }
 
 
 function draw() {
-  background(150);
+  background(144, 144, 144);
 
   if (start) {
     for (let i = 0; i < amount_of_people; i++) {
@@ -51,12 +49,13 @@ function draw() {
 
     }
   }
+
   updateSliderValues();
   peopleNumber = updatePeopleValue();
   hygieneNumber = updateHygieneValue();
   foolsNumber = updateFoolsValue();
   infectedNumber = updateInfectedValue();
-
+ 
 }
 
 class People {
@@ -68,6 +67,7 @@ class People {
     this.fool = fool;
     this.recovered = false;
     this.dead = false;
+    this.healthy = true;
 
     // Chance|(count) of death or suvival
     this.survival_count = int(random(0, 100));
@@ -106,11 +106,15 @@ class People {
     if (this.survival_count >= this.healthiness && !this.dead && this.count == 0) {
       this.infected = false;
       this.recovered = true;
+      this.healthy = false;
+
     }
 
     if (this.survival_count < this.healthiness && !this.recovered && this.count == 0) {
       this.infected = false;
+      this.healthy = false;
       this.dead = true;
+
     }
   }
 

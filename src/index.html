@@ -12,7 +12,6 @@
     <script src="p5.sound.min.js"></script>
     <script src="sketch.js"></script>
     <script src="functions.js"></script>
-    <script src="chartjs.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Bootstrap CSS -->
@@ -39,7 +38,7 @@
             <div class="col-md-6">
 
                 <h1 class="display-4 my-3" style="color: aliceblue;">Virus Simulation</h1>
-                <h5 class="mt-3" style="color: hsla(208, 100%, 97%, 0.5);">Created by: Samuel & Thomas</h5>
+                <h5 class="mt-3" style="color: hsla(209, 62%, 84%, 0.5);">Created by: Samuel & Thomas</h5>
 
             </div>
         </div>
@@ -57,7 +56,7 @@
             </div>
 
             <div class="col-md my-2">
-                <div class="card" style="background-color: rgb(87, 87, 87); color: white; ">
+                <div class="card" style="background-color: rgb(87, 87, 87); color: white; height: 34.44rem">
                     <div class="card-header" style="background-color: #333; ">Settings</div>
                     <div class="form-group mx-3 card-body" style="height: auto; width: auto;">
 
@@ -126,9 +125,19 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row my-3">
+            <div class="col-md-auto">
+                <div class="card" style="background-color: rgb(87, 87, 87); color: white;">
+                    <div class="card-header" style="background-color: #333; ">Graph</div>
+                    <div class="card-body">
+                        <div id="canvas-holder" style="background-color: rgb(212, 212, 212);">
+                            <canvas id="virusChart" width="500" height="400"></canvas>
 
-        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -149,6 +158,8 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+    <script src="chartjs.js"></script>
+
 
 </body>
 
