@@ -132,8 +132,7 @@ function updateHealthyPeople() {
       amount_of_healthy_graph += 1;
     }
   }
-  console.log(amount_of_healthy_graph)
-
+  // console.log(amount_of_healthy_graph)
   return amount_of_healthy_graph
 }
 
@@ -145,7 +144,7 @@ function updateInfectedPeople() {
       amount_of_infected_graph += 1;
     }
   }
-  console.log(amount_of_infected_graph)
+  // console.log(amount_of_infected_graph)
   return amount_of_infected_graph
 }
 
@@ -153,11 +152,11 @@ function updateRecoveredPeople() {
   amount_of_recovered_graph = 0;
 
   for (let i = 0; i < amount_of_people; i++) {
-    if (list_of_people[i].recovered && !list_of_people[i].dead && !list_of_people[i].infected) {
+    if (list_of_people[i].recovered) {
       amount_of_recovered_graph += 1;
     }
   }
-  console.log(amount_of_recovered_graph)
+  // console.log(amount_of_recovered_graph)
   return amount_of_recovered_graph
 }
 
@@ -165,10 +164,10 @@ function updateDeadPeople() {
   amount_of_dead_graph = 0;
 
   for (let i = 0; i < amount_of_people; i++) {
-    if (list_of_people[i].dead && !list_of_people[i].recovered && !list_of_people[i].infected) {
+    if (list_of_people[i].dead) {
       amount_of_dead_graph += 1;
     }
   }
-  console.log(amount_of_dead_graph)
+  // console.log(amount_of_dead_graph)
   return amount_of_dead_graph
 }

@@ -31,9 +31,10 @@ function setup() {
   document.getElementById('pause').onclick = () => noLoop();
 
   // Calls infectedChecker every 1000 milliseconds
-  setInterval(updateGraph, 1000);
   setInterval(infectedChecker, 1000);
-  
+  setInterval(updateGraph, 200);
+  setInterval(updateGraphSlow, 5000);
+
 }
 
 
@@ -55,7 +56,7 @@ function draw() {
   hygieneNumber = updateHygieneValue();
   foolsNumber = updateFoolsValue();
   infectedNumber = updateInfectedValue();
- 
+
 }
 
 class People {
@@ -67,7 +68,9 @@ class People {
     this.fool = fool;
     this.recovered = false;
     this.dead = false;
-    this.healthy = true;
+    if (!this.infected) {
+      this.healthy = true;
+    }
 
     // Chance|(count) of death or suvival
     this.survival_count = int(random(0, 100));
@@ -107,12 +110,16 @@ class People {
       this.infected = false;
       this.recovered = true;
       this.healthy = false;
+      this.fool = false;
+      this.dead = false;
 
     }
 
     if (this.survival_count < this.healthiness && !this.recovered && this.count == 0) {
       this.infected = false;
       this.healthy = false;
+      this.fool = false;
+      this.recovered = false;
       this.dead = true;
 
     }
