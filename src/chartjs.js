@@ -59,7 +59,7 @@ function updateGraph() {
     return temp_infected
 }
 
-function updateGraphSlow(temp_infected) {
+function updateGraphSlow() {
     let datasets = virusSimChart.data.datasets;
 
     datasets[0].data[0] = updateHealthyPeople()
