@@ -113,7 +113,7 @@ function isTouching(i) {
 function infectedChecker() {
   for (let i = 0; i < amount_of_people; i++) {
 
-    // fjerner infected not defined error
+    // Removes "infected not defined" error
     try {
       if (list_of_people[i].infected) {
         list_of_people[i].infectedDuration();
@@ -124,6 +124,7 @@ function infectedChecker() {
   }
 }
 
+// Updates amount of healthy people for the graph
 function updateHealthyPeople() {
   amount_of_healthy_graph = 0;
 
@@ -136,6 +137,7 @@ function updateHealthyPeople() {
   return amount_of_healthy_graph
 }
 
+// Updates amount of infected people for the graph
 function updateInfectedPeople() {
   amount_of_infected_graph = 0;
 
@@ -148,6 +150,7 @@ function updateInfectedPeople() {
   return amount_of_infected_graph
 }
 
+// Updates amount of recovered people for the graph
 function updateRecoveredPeople() {
   amount_of_recovered_graph = 0;
 
@@ -160,6 +163,8 @@ function updateRecoveredPeople() {
   return amount_of_recovered_graph
 }
 
+
+// Updates amount of dead people for the graph
 function updateDeadPeople() {
   amount_of_dead_graph = 0;
 
